@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -11,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -25,58 +25,56 @@ color:#fff;
 display:flex;
 }
 
+/* SIDEBAR */
+
 .sidebar{
 position:fixed;
 left:20px;
 top:50%;
 transform:translateY(-50%);
-width:230px;
+width:380px;
 background:transparent;
-color:#1d4f91;
-padding:25px;
-border-radius:18px;
+padding:0;
 }
 
-.logo{
-font-size:42px;
-font-weight:800;
-margin-bottom:20px;
+.profile-card{
+position:relative;
+width:100%;
 }
 
 .profile{
 width:100%;
-height:350px;
-object-fit:cover;
-object-position:center top;
-border-radius:15px;
+height:auto;
 display:block;
-margin-bottom:20px;
+border-radius:20px;
 }
 
-.name{
-font-weight:700;
-margin-bottom:5px;
-}
-
-.role{
-font-size:13px;
-margin-bottom:25px;
-}
-
-.nav{
+.profile-overlay{
+position:absolute;
+bottom:25px;
+left:25px;
 display:flex;
 flex-direction:column;
 gap:15px;
 }
 
-.nav a{
+.profile-overlay a{
 text-decoration:none;
-color:#1d4f91;
-font-weight:600;
+color:white;
+font-size:26px;
+font-weight:700;
+text-shadow:0 0 15px rgba(0,0,0,.9);
+transition:.3s;
 }
 
+.profile-overlay a:hover{
+opacity:.8;
+}
+
+/* MAIN */
+
 .main{
-margin-left:320px;
+margin-left:480px;
 width:100%;
 padding:60px;
 }
@@ -106,6 +104,7 @@ display:block;
 text-decoration:none;
 color:inherit;
 }
+
 .card img{
 width:100%;
 height:100%;
@@ -141,6 +140,8 @@ font-weight:700;
 margin-top:8px;
 }
 
+/* CONTACT */
+
 .contact{
 min-height:100vh;
 display:flex;
@@ -168,12 +169,23 @@ gap:18px;
 font-size:22px;
 }
 
+.contact-info a{
+color:white;
+text-decoration:none;
+}
+
+.contact-info a:hover{
+opacity:0.8;
+}
+
 .badge{
 margin-top:40px;
 padding:15px 30px;
 border:1px solid #333;
 border-radius:50px;
 }
+
+/* MOBILE */
 
 @media(max-width:900px){
 
@@ -203,34 +215,24 @@ font-size:50px;
 font-size:50px;
 }
 
-.contact-info a{
-color:white;
-text-decoration:none;
 }
 
-.contact-info a:hover{
-opacity:0.8;
-}
-
-}
 </style>
-
 </head>
 
 <body>
 
 <div class="sidebar">
 
-<div class="logo">EDITOR</div>
+<div class="profile-card">
 
 <img src="image.png" class="profile">
 
-<div class="name">Sidharth Raj</div>
-<div class="role">Video Editor </div>
-
-<div class="nav">
+<div class="profile-overlay">
 <a href="#works">WORKS</a>
 <a href="#contact">CONTACT</a>
+</div>
+
 </div>
 
 </div>
@@ -252,7 +254,6 @@ opacity:0.8;
 </div>
 </div>
 </a>
-
 
 <a href="jalebi.html" class="card-link">
 <div class="card">
@@ -316,9 +317,11 @@ opacity:0.8;
 
 <div class="contact-info">
 <div>editor@gmail.com</div>
+
 <a href="https://www.instagram.com/kukku5id/" target="_blank">
-  @kukku5id
+@kukku5id
 </a>
+
 <div>Kochi, India</div>
 </div>
 
@@ -332,4 +335,3 @@ opacity:0.8;
 
 </body>
 </html>
-
